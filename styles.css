@@ -1,0 +1,498 @@
+/* ==========================================================================
+   CSS Variables & Reset (Academic Palette)
+   ========================================================================== */
+   :root {
+    --ieee-blue: #00629B;
+    --ieee-dark-blue: #002855;
+    --accent-red: #9e1b32; /* For deadlines/alerts */
+    --text-main: #333333;
+    --text-muted: #555555;
+    --bg-main: #f9fafb;
+    --bg-white: #ffffff;
+    --border-color: #d1d5db;
+    --panel-bg: #f3f4f6;
+    
+    /* Typography */
+    --font-serif: 'Merriweather', Georgia, serif;
+    --font-sans: 'Open Sans', Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: var(--bg-main);
+    scroll-padding-top: 80px; 
+}
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text-main);
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+a {
+    color: var(--ieee-blue);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--ieee-dark-blue);
+    text-decoration: underline;
+}
+
+.container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ==========================================================================
+   Top Bar & Navigation
+   ========================================================================== */
+.top-bar {
+    background-color: var(--ieee-dark-blue);
+    color: #e5e7eb;
+    font-size: 0.85rem;
+    padding: 6px 0;
+}
+
+.top-bar-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.top-bar a {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.academic-nav {
+    background-color: var(--bg-white);
+    border-bottom: 2px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo {
+    font-family: var(--font-serif);
+    font-weight: 900;
+    color: var(--ieee-dark-blue);
+    font-size: 1.5rem;
+}
+
+.logo .year {
+    font-weight: 300;
+    color: var(--text-muted);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: var(--text-main);
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.nav-links a.active, .nav-links a:hover {
+    color: var(--ieee-blue);
+    text-decoration: none;
+    border-bottom: 3px solid var(--ieee-blue);
+    padding-bottom: 22px; /* Align with nav height */
+}
+
+.mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--ieee-dark-blue);
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   Page Header (Academic Banner)
+   ========================================================================== */
+.page-header {
+    background-color: var(--ieee-blue);
+    background-image: linear-gradient(135deg, var(--ieee-dark-blue) 0%, var(--ieee-blue) 100%);
+    color: var(--bg-white);
+    padding: 60px 0;
+    border-bottom: 5px solid var(--accent-red);
+}
+
+.workshop-number {
+    font-family: var(--font-sans);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    color: #e2e8f0;
+}
+
+.page-header h1 {
+    font-family: var(--font-serif);
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    color: var(--bg-white);
+}
+
+.page-header h2 {
+    font-family: var(--font-serif);
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: #cbd5e1;
+    max-width: 900px;
+}
+
+/* ==========================================================================
+   Main Layout & Typography
+   ========================================================================== */
+.main-layout {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 40px;
+    padding: 50px 20px;
+}
+
+.section-title {
+    font-family: var(--font-serif);
+    font-size: 1.8rem;
+    color: var(--ieee-dark-blue);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.subsection-title {
+    font-family: var(--font-sans);
+    font-size: 1.2rem;
+    color: var(--text-main);
+    margin: 30px 0 15px;
+    font-weight: 700;
+}
+
+.text-content p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* ==========================================================================
+   Lists & Content Components
+   ========================================================================== */
+.academic-list {
+    margin: 15px 0 20px 40px;
+    list-style-type: square;
+}
+
+.academic-list li {
+    margin-bottom: 12px;
+    text-align: justify;
+}
+
+.committee-list {
+    list-style: none;
+    margin-left: 10px;
+}
+
+.committee-list li {
+    margin-bottom: 15px;
+}
+
+.committee-list .affiliation {
+    font-style: italic;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.email-link {
+    font-family: monospace;
+    font-size: 0.95rem;
+}
+
+.multi-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+/* ==========================================================================
+   Sidebar & Panels
+   ========================================================================== */
+.sidebar-panel {
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.border-primary {
+    border-top: 4px solid var(--ieee-blue);
+}
+
+.panel-title {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    color: var(--ieee-dark-blue);
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.dates-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.dates-table td {
+    padding: 8px 0;
+    border-bottom: 1px dashed var(--border-color);
+}
+
+.dates-table .event {
+    font-weight: 600;
+}
+
+.dates-table .date {
+    text-align: right;
+    color: var(--text-muted);
+}
+
+.deadline-highlight {
+    color: var(--accent-red) !important;
+    font-weight: 700;
+}
+
+.countdown-widget {
+    margin-top: 15px;
+    background: var(--panel-bg);
+    padding: 10px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+}
+
+.countdown-label {
+    display: block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 5px;
+}
+
+.countdown-timer {
+    font-family: monospace;
+    font-size: 1rem; 
+    font-weight: 700;
+    color: var(--accent-red);
+    white-space: nowrap; 
+}
+
+.small-text {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.sidebar-list {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all 0.2s;
+}
+
+.btn-primary {
+    background-color: var(--ieee-blue);
+    color: var(--bg-white);
+}
+
+.btn-primary:hover {
+    background-color: var(--ieee-dark-blue);
+    color: var(--bg-white);
+    text-decoration: none;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border-color: var(--ieee-blue);
+    color: var(--ieee-blue);
+}
+
+.btn-outline:hover {
+    background-color: var(--panel-bg);
+    text-decoration: none;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+.mt-10 { margin-top: 10px; }
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.academic-footer {
+    background-color: var(--ieee-dark-blue);
+    color: #d1d5db;
+    padding: 40px 0 20px;
+    font-size: 0.9rem;
+    border-top: 4px solid var(--ieee-blue);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-col h4 {
+    color: var(--bg-white);
+    font-family: var(--font-serif);
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 8px;
+}
+
+.footer-col a {
+    color: #9ca3af;
+}
+
+.footer-col a:hover {
+    color: var(--bg-white);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 0.8rem;
+}
+
+/* ==========================================================================
+   Print Styles (Crucial for Academic Pages)
+   ========================================================================== */
+@media print {
+    .top-bar, .academic-nav, .sidebar-column, .academic-footer {
+        display: none !important;
+    }
+    .main-layout {
+        display: block;
+        padding: 0;
+    }
+    body {
+        font-size: 12pt;
+        color: #000;
+        background: #fff;
+    }
+    .page-header {
+        background: none;
+        color: #000;
+        padding: 20px 0;
+        border-bottom: 2px solid #000;
+    }
+    .page-header h1, .page-header h2, .workshop-number {
+        color: #000;
+    }
+    .content-section {
+        page-break-inside: avoid;
+    }
+    a {
+        color: #000;
+        text-decoration: underline;
+    }
+}
+
+/* ==========================================================================
+   Responsive Logic
+   ========================================================================== */
+@media (max-width: 992px) {
+    .main-layout {
+        grid-template-columns: 1fr;
+    }
+    .sidebar-column {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .top-bar { display: none; }
+    
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background: var(--bg-white);
+        border-bottom: 2px solid var(--border-color);
+        padding: 10px 0;
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .nav-links a.active, .nav-links a:hover {
+        border-bottom: none;
+        padding-bottom: 0;
+        color: var(--ieee-blue);
+    }
+    
+    .mobile-toggle { display: block; }
+    
+    .sidebar-column { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .multi-col { grid-template-columns: 1fr; }
+    
+    .page-header h1 { font-size: 2rem; }
+}
