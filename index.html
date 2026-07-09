@@ -11,20 +11,27 @@
 </head>
 <body>
 
+    <!-- High-Tech Data Grid Background -->
+    <div class="tech-grid"></div>
+
     <!-- Institutional Top Bar -->
     <div class="top-bar">
         <div class="container top-bar-content">
             <span class="conf-link">In conjunction with <a href="https://www3.cs.stonybrook.edu/~bibm2026/" target="_blank">IEEE BIBM 2026</a></span>
-            <span class="conf-dates"><i class="far fa-calendar-alt"></i> December 1-4, 2026 | Dallas, TX, USA</span>
+            <span class="conf-dates"><i class="far fa-calendar-alt"></i> Dec. 1–4, 2026 | Dallas, TX, USA</span>
         </div>
     </div>
 
-    <!-- Main Navigation -->
+    <!-- Main Navigation (Glassmorphism) -->
     <nav id="navbar" class="academic-nav">
         <div class="container nav-container">
-            <div class="logo">
-                <span class="acronym">AIPBDA</span> 
-                <span class="year">2026</span>
+            <div class="logo" style="display: flex; align-items: center; gap: 12px;">
+                <!-- LOGO STYLE: Tech Border that cycles colors -->
+                <img src="logo.png" alt="AIPBDA Logo" class="nav-logo-img">
+                <div>
+                    <span class="acronym">AIPBDA</span> 
+                    <span class="year">2026</span>
+                </div>
             </div>
             <ul class="nav-links">
                 <li><a href="#home" class="active">Home</a></li>
@@ -37,71 +44,131 @@
         </div>
     </nav>
 
-    <!-- Academic Header Banner -->
+    <!-- Academic Header Banner (Vibrant Gradient + Tech Overlay) -->
     <header id="home" class="page-header">
-        <div class="container">
-            <div class="header-content">
-                <p class="workshop-number">1st International Workshop on</p>
-                <h1>AI-Driven Prediction for Biomedical Data Analysis</h1>
-                <h2>Using Image Processing, Graph Signal Processing and Computational Biology</h2>
+        <div class="header-particles"></div>
+        <div class="container" style="display: flex; align-items: center; gap: 40px; flex-wrap: wrap; position: relative; z-index: 2;">
+            
+            <!-- LOGO STYLE: Holographic container with animated gradient border -->
+            <div class="holo-logo-container">
+                <img src="logo.png" alt="AIPBDA 2026 Logo" class="header-logo">
+            </div>
+            
+            <div class="header-content" style="flex: 1; min-width: 300px;">
+                <p class="workshop-number"><i class="fas fa-microscope"></i> International Workshop on</p>
+                <h1 class="gradient-text-header">AI-Driven Prediction for Biomedical Data Analysis using Image Processing, Graph Signal Processing and Computational Biology</h1>
+                <h3>held in conjunction with IEEE BIBM 2026 in Dallas, Texas.</h3>
             </div>
         </div>
     </header>
 
-    <!-- Main Content Layout (Sidebar + Main Column) -->
+    <!-- Main Content Layout -->
     <div class="container main-layout">
         
         <!-- Left Column: Main Content -->
         <main class="content-column">
 
             <!-- Scope Section -->
-            <section id="scope" class="content-section">
-                <h3 class="section-title">Workshop Overview</h3>
+            <section id="scope" class="content-section card tech-glass">
+                <div class="hud-bracket hud-tl"></div>
+                <div class="hud-bracket hud-br"></div>
+                <div class="animated-border top"></div>
+                
+                <h3 class="section-title"><i class="fas fa-lightbulb gradient-icon"></i> Introduction</h3>
+                
                 <div class="text-content">
-                    <p>The convergence of Image Processing, Graph Signal Processing (GSP), and Computational Biology represents a critical frontier in biomedical data analysis. As medical datasets expand across multi-modal dimensions—ranging from high-resolution histopathology scans to complex protein-protein interaction networks—there is a pressing need for robust artificial intelligence frameworks capable of synthesizing these distinct data topologies.</p>
-                    <p><strong>AIPBDA 2026</strong> aims to convene leading researchers, clinical practitioners, and computational scientists to explore novel predictive models. The workshop focuses heavily on the integration of spatial imaging features with relational biological graphs to enhance diagnostic accuracy, disease prediction, and clinical decision support systems.</p>
+                    <!-- Lead Paragraph -->
+                    <p style="font-size: 1.1rem; font-weight: 600; color: var(--primary-dark); margin-bottom: 25px; line-height: 1.7;">
+                        This workshop focuses on the pivotal role of artificial intelligence (AI) in the fields of a pioneering integration of computational biology, bioinformatics, medical image processing, and graph signal processing (GSP) for healthcare services.
+                    </p>
+
+                    <p>
+                        Participants in this workshop are expected to present their research how AI based processing generalizes traditional signal processing to irregular graph structures, enabling advanced analysis of biological networks derived from genomics, proteomics, and multimodal medical imaging data.
+                    </p>
+
+                    <!-- Methodological Focus Subsection -->
+                    <h4 class="subsection-title" style="margin-top: 35px; margin-bottom: 20px; border-bottom: 1px solid var(--border-color); padding-bottom: 8px;">
+                        Methodological Focus & Applications
+                    </h4>
+                    
+                    <p>
+                        The fusion of AI techniques such as deep learning, reinforcement learning, NLP-based models extract insights from biomedical literature and genomic sequences. This holistic approach bridges fostering innovations in multiomics integration and 3D biomolecular structure prediction on geometric data. Key areas of exploration include:
+                    </p>
+
+                    <ul class="academic-list colorful-bullets" style="margin-bottom: 30px; margin-top: 15px;">
+                        <li>
+                            <strong>Generative Frameworks:</strong> Models such as diffusion models or GANs not only synthesize realistic patient data and molecular structures, but also tackle real-world challenges in precision medicine i.e. from single-cell sequencing diversity mapping to anomaly detection in neuroimaging graphs.
+                        </li>
+                        <li>
+                            <strong>Predictive Analytics:</strong> Through interactive sessions, we will explore the capabilities of AI algorithms in processing and predicting treatment outcomes and devising the most efficacious treatment combinations, underscoring the contribution of AI to more accurate and individualized patient care.
+                        </li>
+                        <li>
+                            <strong>Emerging Integrations:</strong> NLP-enhanced graph-based fusion of MRI/CT images with genomic signals for robust diagnostics, generative model-driven augmentation of sparse datasets, quantum-enhanced simulations of biological systems, and ethical AI frameworks for biotech.
+                        </li>
+                    </ul>
+
+                    <!-- Audience & Outcomes Subsection -->
+                    <div style="margin-top: 35px;">
+                        <p style="margin-bottom: 15px;">
+                            <strong>Target Audience:</strong> This workshop is intended for researchers, faculty members, and industry engineers specializing in electronics, communication, computer science, and information technology within biomedical contexts. The sessions will emphasize practical implementations utilizing tools such as MATLAB for GSP filters, advanced AI models, and NLP pipelines (e.g., BioBERT and generative transformers).
+                        </p>
+                        <p style="margin-bottom: 0;">
+                            <strong>Workshop Outcomes:</strong> Participants can expect to develop collaborative project concepts, generate proposal templates for research funding, and establish a roadmap for scalable biomedical intelligence platforms. The workshop aims to position attendees at the forefront of interdisciplinary research in 2026, facilitating significant breakthroughs in diagnostic procedures and treatment efficacy.
+                        </p>
+                    </div>
                 </div>
             </section>
-
+            
             <!-- Topics Section -->
-            <section id="call-for-papers" class="content-section">
-                <h3 class="section-title">Call for Papers & Topics of Interest</h3>
+            <section id="call-for-papers" class="content-section card tech-glass">
+                <div class="hud-bracket hud-tl magenta"></div>
+                <div class="hud-bracket hud-br magenta"></div>
+                <div class="animated-border top magenta"></div>
+
+                <h3 class="section-title"><i class="fas fa-network-wired gradient-icon"></i> Research Topics Included in the Workshop</h3>
                 <div class="text-content">
-                    <p>We invite original, high-quality research submissions. Topics of interest include, but are not strictly limited to:</p>
-                    <ul class="academic-list">
-                        <li><strong>Deep Learning in Medical Imaging:</strong> Novel CNN and Vision Transformer (ViT) architectures for segmentation, classification, and anomaly detection in MRI, CT, and ultrasound data.</li>
-                        <li><strong>Graph Signal Processing & GNNs:</strong> Application of Graph Neural Networks for analyzing biological networks, multi-omics data, and molecular property prediction.</li>
-                        <li><strong>Explainable AI (XAI) in Biomedicine:</strong> Interpretability frameworks (e.g., SHAP, Integrated Gradients, Grad-CAM) applied to clinical AI systems to ensure transparency.</li>
-                        <li><strong>Multi-Modal Data Fusion:</strong> Methodologies for integrating spatial medical imaging with structural genomic/proteomic graphs.</li>
-                        <li><strong>Computational Biology Algorithms:</strong> Predictive modeling for genomics, transcriptomics, and pathway analysis.</li>
+                    <p class="subtitle-muted">(We invite original and unpublished papers in the following areas, but are not restricted to them)</p>
+                    <ul class="academic-list colorful-bullets">
+                        <li><strong> Computational Biology:</strong> AI-driven protein folding and dynamics simulation; Systems biology modeling with graph neural networks; Quantum computing for molecular interaction prediction.</li>
+                        <li><strong> Bioinformatics:</strong> Multi-omics data fusion and analysis pipelines; Single-cell RNA-seq graph clustering; Ethical AI for genomic privacy preservation.</li>
+                        <li><strong> Medical Image Processing:</strong> Multimodal MRI/CT segmentation with CNNs; Transfer learning for low-data diagnostic imaging; Anomaly detection in radiological graph signals.</li>
+                        <li><strong> Graph Signal Processing:</strong> Graph Fourier transforms for biological networks; Polynomial graph filters for denoising; Sampling and reconstruction on irregular domains.</li>
+                        <li><strong> NLP-Based Models:</strong> BioBERT for literature mining and hypothesis generation; Sequence-to-graph NLP for genomic annotation; Transformer models for biomedical knowledge graphs.</li>
+                        <li><strong> Generative Models:</strong> GANs for synthetic medical image augmentation; Diffusion models for molecular structure generation; Variational autoencoders for patient data synthesis.</li>
                     </ul>
                 </div>
             </section>
 
             <!-- Committee Section -->
-            <section id="committee" class="content-section">
-                <h3 class="section-title">Organizing Committee</h3>
+            <section id="committee" class="content-section card tech-glass">
+                <div class="hud-bracket hud-tl purple"></div>
+                <div class="hud-bracket hud-br purple"></div>
+                <div class="animated-border top purple"></div>
+
+                <h3 class="section-title"><i class="fas fa-sitemap gradient-icon"></i> Organizing Committee</h3>
                 
-                <h4 class="subsection-title">Workshop Chairs</h4>
+                <h4 class="subsection-title"><i class="fas fa-users color-accent-1"></i> Program Chairs</h4>
                 <ul class="committee-list">
                     <li>
-                        <strong>Prof. Mahua Bhattacharya</strong><br>
-                        <span class="affiliation">Atal Bihari Vajpayee Indian Institute of Information Technology and Management (ABV-IIITM), Gwalior, India</span><br>
-                        <a href="mailto:mit_2025001@iiitm.ac.in" class="email-link">mb@iiitm.ac.in</a>
+                        <strong>Prof. Mahua Bhattacharya (Program Chair)</strong><br>
+                        <span class="affiliation">Prof. In-Charge, Center for Biomedical Research, ABV-Indian Institute of Information Technology & Management (Govt. of India, Gwalior, Madhya Pradesh, India)</span>
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mb@iiitm.ac.in,mit_2025001@iiitm.ac.in&su=Inquiry%20Regarding%20AIPBDA%202026%20Workshop" target="_blank" style="font-size: 0.95rem; display: inline-flex; align-items: center; gap: 6px; margin-top: 2px;">
+                            <i class="fas fa-envelope"></i> mb@iiitm.ac.in
+                        </a>
                     </li>
                     <li>
-                        <strong>[Co-Chair Name]</strong><br>
-                        <span class="affiliation">[Department/Institute Name, University, Country]</span><br>
-                        <a href="mailto:#" class="email-link">email@domain.edu</a>
+                        <strong>Dr. Surabhi Mishra (Program Co-Chair)</strong><br>
+                        <span class="affiliation">Assistant Professor, Dr. Shakuntala Mishra National Rehabilitation University (State Govt.), Lucknow, Uttar Pradesh, India</span>
                     </li>
                 </ul>
 
-                <h4 class="subsection-title">Technical Program Committee</h4>
+                <h4 class="subsection-title"><i class="fas fa-user-tie color-accent-2"></i> Program Committee Members</h4>
                 <ul class="committee-list multi-col">
-                    <li><strong>[Dr. Researcher Name]</strong>, <em>[University Name]</em></li>
-                    <li><strong>[Dr. Researcher Name]</strong>, <em>[University Name]</em></li>
-                    <li><strong>[Dr. Researcher Name]</strong>, <em>[University Name]</em></li>
-                    <li><strong>[Dr. Researcher Name]</strong>, <em>[University Name]</em></li>
+                    <li><strong>Prof. João Miranda</strong>, <em>Lisbon, Portugal</em></li>
+                    <li><strong>Dr. Narinder Singh Punn</strong>, <em>India</em></li>
+                    <li><strong>Dr. Santosh Prakash Chauhan</strong>, <em>India</em></li>
+                    <li><strong>Dr. Roshni Chakraborty</strong>, <em>India</em></li>
+                    <li><strong>Dr. Biswabandhu Jana</strong>, <em>India</em></li>
                 </ul>
             </section>
         </main>
@@ -110,53 +177,56 @@
         <aside class="sidebar-column">
             
             <!-- Important Dates Panel -->
-            <div id="dates" class="sidebar-panel border-primary">
-                <h4 class="panel-title">Important Dates</h4>
+            <div id="dates" class="sidebar-panel card tech-glass">
+                <div class="animated-border top"></div>
+                <h4 class="panel-title"><i class="fas fa-clock gradient-icon"></i> Important Dates</h4>
                 <table class="dates-table">
                     <tbody>
                         <tr>
                             <td class="event">Paper Submission:</td>
-                            <td class="date deadline-highlight">Sept 27, 2026</td>
+                            <td class="date deadline-highlight">Oct. 9, 2026</td>
                         </tr>
                         <tr>
                             <td class="event">Acceptance Notification:</td>
-                            <td class="date">Oct 18, 2026</td>
+                            <td class="date">Oct. 21, 2026</td>
                         </tr>
                         <tr>
                             <td class="event">Camera-Ready Due:</td>
-                            <td class="date">Nov 8, 2026</td>
+                            <td class="date">Nov. 8, 2026</td>
                         </tr>
                         <tr>
-                            <td class="event">Workshop Date:</td>
-                            <td class="date">Dec 1-4, 2026</td>
+                            <td class="event">Workshops:</td>
+                            <td class="date">Dec. 1–4, 2026</td>
                         </tr>
                     </tbody>
                 </table>
                 <div class="countdown-widget">
                     <span class="countdown-label">Time to Submission:</span>
-                    <div id="sidebar-countdown" class="countdown-timer">Loading...</div>
+                    <div id="sidebar-countdown" class="countdown-timer gradient-text">Submission Closed</div>
                 </div>
             </div>
 
             <!-- Submission Instructions Panel -->
-            <div id="submission" class="sidebar-panel">
-                <h4 class="panel-title">Submission Guidelines</h4>
+            <div id="submission" class="sidebar-panel card tech-glass">
+                <div class="animated-border top magenta"></div>
+                <h4 class="panel-title"><i class="fas fa-file-upload gradient-icon"></i> Submission Guidelines</h4>
                 <p class="small-text">Papers must be formatted according to the standard IEEE 2-column conference proceedings template.</p>
                 <ul class="sidebar-list small-text">
                     <li><strong>Regular Papers:</strong> Up to 8 pages.</li>
-                    <li><strong>Short Papers:</strong> Up to 4 pages.</li>
                     <li>Blind review process strictly enforced.</li>
                 </ul>
-                <a href="https://wi-lab.com/cyberchair/2026/bibm26/scripts/submit.php?subarea=S49&undisplay_detail=1&wh=/cyberchair/2026/bibm26/scripts/ws_submit.php" class="btn btn-block btn-primary mt-10">Submission Portal</a>
-                <a href="https://www.ieee.org/conferences/publishing/templates.html" target="_blank" class="btn btn-block btn-outline mt-10">IEEE Word/LaTeX Templates</a>
+                <a href="https://wi-lab.com/cyberchair/2026/bibm26/scripts/submit.php?subarea=S49&undisplay_detail=1&wh=/cyberchair/2026/bibm26/scripts/ws_submit.php" class="btn btn-block btn-shimmer mt-15">
+                    <span class="btn-text"><i class="fas fa-paper-plane"></i> Submission Portal</span>
+                </a>
+                <a href="https://www.ieee.org/conferences/publishing/templates.html" target="_blank" class="btn btn-block btn-outline mt-10"><i class="fas fa-download"></i> IEEE Templates</a>
             </div>
 
             <!-- Affiliations Panel -->
-            <div class="sidebar-panel text-center">
-                <h4 class="panel-title">Sponsored By</h4>
-                <div class="sponsor-logos">
-                    <!-- Standard text placeholder for academic sponsor -->
-                    <h3 style="font-family: 'Merriweather', serif; color: #003366;">IEEE BIBM</h3>
+            <div class="sidebar-panel card tech-glass text-center-panel">
+                <div class="animated-border top purple"></div>
+                <h4 class="panel-title" style="justify-content: center;"><i class="fas fa-globe gradient-icon"></i> Workshop Mode</h4>
+                <div class="mode-badge">
+                    Hybrid
                 </div>
             </div>
 
@@ -168,14 +238,14 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h4>AIPBDA 2026</h4>
+                    <h4 class="gradient-text-light">AIPBDA 2026</h4>
                     <p>AI-Driven Prediction for Biomedical Data Analysis</p>
                 </div>
                 <div class="footer-col">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="https://www3.cs.stonybrook.edu/~bibm2026/">IEEE BIBM Main Conference</a></li>
-                        <li><a href="https://www.ieee.org/">IEEE Policies</a></li>
+                        <li><a href="https://www3.cs.stonybrook.edu/~bibm2026/"><i class="fas fa-angle-right"></i> IEEE BIBM Main Conference</a></li>
+                        <li><a href="https://www.ieee.org/"><i class="fas fa-angle-right"></i> IEEE Policies</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
