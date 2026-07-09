@@ -66,8 +66,8 @@ document.addEventListener('DOMContentLoaded', () => {
     /* ==================================================
        3. Academic Deadline Countdown Widget
        ================================================== */
-    // Format: YYYY-MM-DDTHH:MM:SS (Adjusted to BIBM Workshop Deadline)
-    const deadlineStr = "2026-09-27T23:59:59";
+    // Format: YYYY-MM-DDTHH:MM:SS (Adjusted to updated Oct. 9 BIBM Workshop Deadline)
+    const deadlineStr = "2026-10-09T23:59:59"; 
     const deadline = new Date(deadlineStr).getTime();
     const countdownElement = document.getElementById('sidebar-countdown');
 
